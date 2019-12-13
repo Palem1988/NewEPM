@@ -1,0 +1,22 @@
+[Unit]
+Description=EPMCoin's distributed currency daemon
+After=network.target
+
+[Service]
+User=epmcoincore
+Group=epmcoincore
+
+Type=forking
+PIDFile=/var/lib/epmcoind/epmcoind.pid
+ExecStart=/usr/bin/epmcoind -daemon -pid=/var/lib/epmcoind/epmcoind.pid \
+-conf=/etc/epmcoincore/epmcoin.conf -datadir=/var/lib/epmcoind -disablewallet
+
+Restart=always
+PrivateTmp=true
+TimeoutStopSec=60s
+TimeoutStartSec=2s
+StartLimitInterval=120s
+StartLimitBurst=5
+
+[Install]
+WantedBy=multi-user.target

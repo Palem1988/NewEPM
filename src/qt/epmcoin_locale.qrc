@@ -1,0 +1,26 @@
+<!DOCTYPE RCC><RCC version="1.0">
+    <qresource prefix="/translations">
+        <file alias="ar">locale/epmcoin_ar.qm</file>
+        <file alias="bg">locale/epmcoin_bg.qm</file>
+        <file alias="de">locale/epmcoin_de.qm</file>
+        <file alias="en">locale/epmcoin_en.qm</file>
+        <file alias="es">locale/epmcoin_es.qm</file>
+        <file alias="fi">locale/epmcoin_fi.qm</file>
+        <file alias="fr">locale/epmcoin_fr.qm</file>
+        <file alias="it">locale/epmcoin_it.qm</file>
+        <file alias="ja">locale/epmcoin_ja.qm</file>
+        <file alias="ko">locale/epmcoin_ko.qm</file>
+        <file alias="nl">locale/epmcoin_nl.qm</file>
+        <file alias="pl">locale/epmcoin_pl.qm</file>
+        <file alias="pt">locale/epmcoin_pt.qm</file>
+        <file alias="ru">locale/epmcoin_ru.qm</file>
+        <file alias="sk">locale/epmcoin_sk.qm</file>
+        <file alias="sv">locale/epmcoin_sv.qm</file>
+        <file alias="th">locale/epmcoin_th.qm</file>
+        <file alias="tr">locale/epmcoin_tr.qm</file>
+        <file alias="ua">locale/epmcoin_ua.qm</file>
+        <file alias="vi">locale/epmcoin_vi.qm</file>
+        <file alias="zh_CN">locale/epmcoin_zh_CN.qm</file>
+        <file alias="zh_TW">locale/epmcoin_zh_TW.qm</file>
+    </qresource>
+</RCC>

@@ -1,0 +1,6 @@
+usr/local/bin/epmcoin-qt usr/bin
+share/pixmaps/epmcoin32.xpm usr/share/pixmaps
+share/pixmaps/epmcoin16.xpm usr/share/pixmaps
+share/pixmaps/epmcoin128.png usr/share/pixmaps
+debian/epmcoin-qt.desktop usr/share/applications
+debian/epmcoin-qt.protocol usr/share/kde4/services/

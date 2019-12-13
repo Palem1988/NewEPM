@@ -1,0 +1,13 @@
+[Desktop Entry]
+Encoding=UTF-8
+Name=EPMCoin Core
+Comment=EPMCoin P2P Cryptocurrency
+Comment[de]=Verbinde mit dem EPMCoin peer-to-peer Netzwerk
+Comment[fr]=EPMCoin, monnaie virtuelle cryptographique pair à pair
+Comment[tr]=EPMCoin, eşten eşe kriptografik sanal para birimi
+Exec=epmcoin-qt %u
+Terminal=false
+Type=Application
+Icon=epmcoin128
+MimeType=x-scheme-handler/epmcoin;
+Categories=Office;Finance;
