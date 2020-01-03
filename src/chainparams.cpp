@@ -382,11 +382,18 @@ public:
 			(3663, uint256S("0xefa73709611d28ccab18213fd8bac31a678ad434afa49b825243c32636754845"))
 			(4305, uint256S("0x9a7d39f8b07734e7005147f77b4f80b06c4c0cc1a28c925e99c5865badbcf51d"))
 			(5019, uint256S("0x625a57347143d422a9bd762aa55a6efaa7a6b181278625281ebbbe04d9195cf5"))
+			(5698, uint256S("0xb9ebc22981b1153fc0a984b6af5264b5e15ab9001e8d1afa817b7c833720c1d5"))
+			(10598, uint256S("0x9976023f764c056b3ede54741a784ea2c27831ee95f0b725f1b47f58f14ba372"))
+			(18426, uint256S("0xec08269c0ece9656cbce5eb36f37f560174acb502e6547888ce47ec8354149ce"))
+			(24216, uint256S("0xd8a2f2e2f73a729bf5e4c75b378bdf50b173948f7821f64c369d379568d42a1a"))
+			(24217, uint256S("0x22f85433a58925c656f389dad155d13be5db79d781347ad9b5992db573491e2e"))
+			(25898, uint256S("0xf8c20775c382204d5ed9e7b7204bae14d06001f6744223ce1ee7791821e627c5"))
+			(31788, uint256S("0xbde3682acaff79921a3c6bf2391ce35078d51598366fdc8e2fc2f64e12dc58ca"))
 		};
 
 		chainTxData = ChainTxData{
-			1576214371, // * UNIX timestamp of last known number of transactions
-			16813,    // * total number of transactions between genesis and that timestamp
+			1578037508, // * UNIX timestamp of last known number of transactions
+			91369,    // * total number of transactions between genesis and that timestamp
 						//   (the tx=... number in the SetBestChain debug.log lines)
 						0.1         // * estimated number of transactions per second after that timestamp
 		};
