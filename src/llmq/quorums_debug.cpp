@@ -7,6 +7,7 @@
 #include "quorums_debug.h"
 
 #include "chainparams.h"
+#include "validation.h"
 
 #include "evo/deterministicmns.h"
 #include "quorums_utils.h"
@@ -25,7 +26,17 @@ UniValue CDKGDebugSessionStatus::ToJson(int detailLevel) const
 
     std::vector<CDeterministicMNCPtr> dmnMembers;
     if (detailLevel == 2) {
-        dmnMembers = CLLMQUtils::GetAllQuorumMembers((Consensus::LLMQType) llmqType, quorumHash);
+		const CBlockIndex* pindex = nullptr;
+		{
+			LOCK(cs_main);
+			auto it = mapBlockIndex.find(quorumHash);
+			if (it != mapBlockIndex.end()) {
+				pindex = it->second;
+			}
+		}
+		if (pindex != nullptr) {
+			dmnMembers = CLLMQUtils::GetAllQuorumMembers((Consensus::LLMQType) llmqType, pindex);
+		}
     }
 
     ret.push_back(Pair("llmqType", llmqType));

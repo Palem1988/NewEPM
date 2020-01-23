@@ -11,7 +11,7 @@
 #include "sync.h"
 #include "uint256.h"
 
-static const std::string EVODB_BEST_BLOCK = "b_b";
+static const std::string EVODB_BEST_BLOCK = "b_b2";
 
 class CEvoDB
 {

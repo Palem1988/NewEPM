@@ -1100,7 +1100,6 @@ bool WriteBlockToDisk(const CBlock& block, CDiskBlockPos& pos, const CMessageHea
 bool ReadBlockFromDisk(CBlock& block, const CDiskBlockPos& pos, const Consensus::Params& consensusParams) {
 #else
 bool ReadBlockFromDisk(CBlock& block, const CDiskBlockPos& pos, const Consensus::Params& consensusParams, const char* str) {
-    LogPrintf("ReadBlockFromDisk(CDiskBlockPos)::called by %s\n", str);
 #endif
     LOCK(cs_main);
     block.SetNull();
@@ -1129,7 +1128,7 @@ bool ReadBlockFromDisk(CBlock& block, const CDiskBlockPos& pos, const Consensus:
 bool ReadBlockFromDisk(CBlock& block, const CBlockIndex* pindex, const Consensus::Params& consensusParams) {
 #else
 bool ReadBlockFromDisk(CBlock& block, const CBlockIndex* pindex, const Consensus::Params& consensusParams, const char* str) {
-    LogPrintf("ReadBlockFromDisk(CBlockIndex)::called by %s\n", str);
+    //LogPrintf("ReadBlockFromDisk(CBlockIndex)::called by %s\n", str);
 #endif
     CDiskBlockPos blockPos;
     {

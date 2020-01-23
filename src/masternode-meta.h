@@ -102,7 +102,11 @@ public:
 
         std::string strVersion;
         if(ser_action.ForRead()) {
+			Clear();
             READWRITE(strVersion);
+			if (strVersion != SERIALIZATION_VERSION_STRING) {
+				return;
+			}
         }
         else {
             strVersion = SERIALIZATION_VERSION_STRING;
@@ -125,9 +129,6 @@ public:
 
         READWRITE(nDsqCount);
 
-        if(ser_action.ForRead() && (strVersion != SERIALIZATION_VERSION_STRING)) {
-            Clear();
-        }
     }
 
 public:

@@ -218,8 +218,7 @@ bool ComputeNextStakeModifier(const CBlockIndex* pindexCurrent, uint64_t &nStake
         }
         LogPrintf("ComputeNextStakeModifier: selection height [%d, %d] map %s\n", nHeightFirstCandidate, pindexPrev->nHeight, strSelectionMap);
     }
-    LogPrintf("ComputeNextStakeModifier: new modifier=0x%016x time=%s\n", nStakeModifierNew, DateTimeStrFormat("%Y-%m-%d %H:%M:%S", pindexPrev->GetBlockTime()).c_str());
-
+   
     nStakeModifier = nStakeModifierNew;
     fGeneratedStakeModifier = true;
     return true;
@@ -359,6 +358,10 @@ bool CheckProofOfStake(const CBlock &block, uint256& hashProofOfStake, CBlockInd
 
     // Kernel (input 0) must match the stake hash target per coin age (nBits)
     const CTxIn& txin = tx->vin[0];
+
+	// Transaction index is required to get to block header
+	if (!fTxIndex)
+		return error("CheckProofOfStake() : transaction index not available");
 
 	// Get transaction index for the previous transaction
 	CDiskTxPos postx;

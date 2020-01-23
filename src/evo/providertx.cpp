@@ -176,7 +176,7 @@ bool CheckProRegTx(const CTransaction& tx, const CBlockIndex* pindexPrev, CValid
     }
 
     if (pindexPrev) {
-        auto mnList = deterministicMNManager->GetListForBlock(pindexPrev->GetBlockHash());
+		auto mnList = deterministicMNManager->GetListForBlock(pindexPrev);
 
         // only allow reusing of addresses when it's for the same collateral (which replaces the old MN)
         if (mnList.HasUniqueProperty(ptx.addr) && mnList.GetUniquePropertyMN(ptx.addr)->collateralOutpoint != collateralOutpoint) {
@@ -228,7 +228,7 @@ bool CheckProUpServTx(const CTransaction& tx, const CBlockIndex* pindexPrev, CVa
     }
 
     if (pindexPrev) {
-        auto mnList = deterministicMNManager->GetListForBlock(pindexPrev->GetBlockHash());
+		auto mnList = deterministicMNManager->GetListForBlock(pindexPrev);
         auto mn = mnList.GetMN(ptx.proTxHash);
         if (!mn) {
             return state.DoS(100, false, REJECT_INVALID, "bad-protx-hash");
@@ -293,7 +293,7 @@ bool CheckProUpRegTx(const CTransaction& tx, const CBlockIndex* pindexPrev, CVal
     }
 
     if (pindexPrev) {
-        auto mnList = deterministicMNManager->GetListForBlock(pindexPrev->GetBlockHash());
+		auto mnList = deterministicMNManager->GetListForBlock(pindexPrev);
         auto dmn = mnList.GetMN(ptx.proTxHash);
         if (!dmn) {
             return state.DoS(100, false, REJECT_INVALID, "bad-protx-hash");
@@ -360,7 +360,7 @@ bool CheckProUpRevTx(const CTransaction& tx, const CBlockIndex* pindexPrev, CVal
     }
 
     if (pindexPrev) {
-        auto mnList = deterministicMNManager->GetListForBlock(pindexPrev->GetBlockHash());
+		auto mnList = deterministicMNManager->GetListForBlock(pindexPrev);
         auto dmn = mnList.GetMN(ptx.proTxHash);
         if (!dmn)
             return state.DoS(100, false, REJECT_INVALID, "bad-protx-hash");

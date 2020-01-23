@@ -25,8 +25,8 @@ The examples below presume you have a basic build environment installed:
 
 ### Static compile
 
-    git clone https://github.com/EPMCoinOfficial/EPM
-    cd EPM/depends
+    git clone https://github.com/epmcoin/NewEPM
+    cd NewEPM/depends
     make HOST=x86_64-linux-gnu
     cd ..
     ./autogen.sh
@@ -46,8 +46,8 @@ The examples below presume you have a basic build environment installed:
     (if you receive an error here, you need to run as the root user; as the system is trying to install a library)
 
     cd ../..
-    git clone https://github.com/EPMCoinOfficial/EPM
-    cd EPM
+    git clone https://github.com/epmcoin/NewEPM
+    cd NewEPM
     ./autogen.sh
     ./configure
     make
@@ -66,7 +66,7 @@ Development Process
 -------------------
 
 The `master` branch is meant to be stable. Development is normally done in separate branches.
-[Tags](https://github.com/EPMCoinOfficial/EPM/tags) are created to indicate new official,
+[Tags](https://github.com/epmcoin/NewEPM/tags) are created to indicate new official,
 stable release versions of EPMCoin.
 
 The contribution workflow is described in [CONTRIBUTING.md](CONTRIBUTING.md).

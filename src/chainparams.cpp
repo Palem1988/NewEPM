@@ -323,14 +323,22 @@ public:
 		vSeeds.push_back(CDNSSeedData("178.63.174.59", "178.63.174.59"));
 		vSeeds.push_back(CDNSSeedData("62.210.188.7", "62.210.188.7"));
 		vSeeds.push_back(CDNSSeedData("95.216.19.167", "95.216.19.167"));
+		vSeeds.push_back(CDNSSeedData("2a01:4f9:2a:13d8::2", "2a01:4f9:2a:13d8::2"));
 		vSeeds.push_back(CDNSSeedData("144.76.2.67", "144.76.2.67"));
-		vSeeds.push_back(CDNSSeedData("5.9.40.169", "5.9.40.169  "));
+		vSeeds.push_back(CDNSSeedData("2a01:4f8:190:7242::2", "2a01:4f8:190:7242::2"));
+		vSeeds.push_back(CDNSSeedData("5.9.40.169", "5.9.40.169"));
+		vSeeds.push_back(CDNSSeedData("2a01:4f8:161:248a::2", "2a01:4f8:161:248a::2"));
 		vSeeds.push_back(CDNSSeedData("95.216.17.97", "95.216.17.97"));
+		vSeeds.push_back(CDNSSeedData("2a01:4f9:2a:119e::2", "2a01:4f9:2a:119e::2"));
 		vSeeds.push_back(CDNSSeedData("85.10.193.18", "85.10.193.18"));
-		vSeeds.push_back(CDNSSeedData("95.216.0.167", "95.216.0.167"));
-		vSeeds.push_back(CDNSSeedData("38.103.128.98", "38.103.128.98"));
+		vSeeds.push_back(CDNSSeedData("2a01:4f8:a0:6451::2", "2a01:4f8:a0:6451::2"));
+		vSeeds.push_back(CDNSSeedData("144.76.4.42", "144.76.4.42"));
+		vSeeds.push_back(CDNSSeedData("2a01:4f8:190:7409::2", "2a01:4f8:190:7409::2"));
+		vSeeds.push_back(CDNSSeedData("173.0.56.98", "173.0.56.98"));
 		vSeeds.push_back(CDNSSeedData("148.251.245.229", "148.251.245.229"));
+		vSeeds.push_back(CDNSSeedData("2a01:4f8:192:8264::2", "2a01:4f8:192:8264::2"));
 		vSeeds.push_back(CDNSSeedData("5.9.110.248", "5.9.110.248"));
+		vSeeds.push_back(CDNSSeedData("2a01:4f8:162:5227::2", "2a01:4f8:162:5227::2"));
 
 		// EPM addresses start with 'P'
 		base58Prefixes[PUBKEY_ADDRESS] = std::vector<unsigned char>(1, 55);
@@ -388,12 +396,16 @@ public:
 			(24216, uint256S("0xd8a2f2e2f73a729bf5e4c75b378bdf50b173948f7821f64c369d379568d42a1a"))
 			(24217, uint256S("0x22f85433a58925c656f389dad155d13be5db79d781347ad9b5992db573491e2e"))
 			(25898, uint256S("0xf8c20775c382204d5ed9e7b7204bae14d06001f6744223ce1ee7791821e627c5"))
-			(31788, uint256S("0xbde3682acaff79921a3c6bf2391ce35078d51598366fdc8e2fc2f64e12dc58ca"))
+			(39425, uint256S("0x5ffbca17ecb72bb0de817fb0d325558eca21c15a4611c93e2d8bb4321c44db9e"))
+			(48752, uint256S("0x85258f82d98201a2c02d8e70b3ee9f943691ebcb45a515088265748e14ca7dc7"))
+			(56867, uint256S("0xf2d7d3185c262625306e70607912ec61cde4a2a829021907445188687c6ee30f"))
+			(56868, uint256S("0x5ecb89e91c660ed49cbf7c69f42511baa0dfb5bd61b757f0be805a8925a90cef"))
+			(58211, uint256S("0xeeaf7a9623b7dbc6bd9537dcf64e3aa7d9459f68cbb4a521caf1fc2d85145698"))
 		};
 
 		chainTxData = ChainTxData{
-			1578037508, // * UNIX timestamp of last known number of transactions
-			91369,    // * total number of transactions between genesis and that timestamp
+			1579748158, // * UNIX timestamp of last known number of transactions
+			159636,    // * total number of transactions between genesis and that timestamp
 						//   (the tx=... number in the SetBestChain debug.log lines)
 						0.1         // * estimated number of transactions per second after that timestamp
 		};

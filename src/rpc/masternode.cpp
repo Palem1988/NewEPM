@@ -595,6 +595,7 @@ UniValue masternodelist(const JSONRPCRequest& request)
             objMN.push_back(Pair("address", dmn->pdmnState->addr.ToString()));
             objMN.push_back(Pair("payee", payeeStr));
             objMN.push_back(Pair("status", dmnToStatus(dmn)));
+			objMN.push_back(Pair("posescore", dmn->pdmnState->nPoSePenalty));
             objMN.push_back(Pair("lastpaidtime", dmnToLastPaidTime(dmn)));
             objMN.push_back(Pair("lastpaidblock", dmn->pdmnState->nLastPaidHeight));
             objMN.push_back(Pair("nextpaymentblock", nextPayments.count(dmn->proTxHash) ? nextPayments[dmn->proTxHash] : -1));
